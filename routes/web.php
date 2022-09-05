@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PublicacionesController;
+use App\Http\Controllers\UsersController;
+use App\Models\users;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Inicio');
 });
+
+Route::get('/Login', function () {
+    return view('Login');
+});
+
+Route::get('/Registro', function () {
+    return view('AltaUsuario');
+});
+
+Route::get('/Publicar', function () {
+    return view('AltaPublicaciones');
+});
+
+Route::post("/Publicar",[PublicacionesController::class, "store"]);
