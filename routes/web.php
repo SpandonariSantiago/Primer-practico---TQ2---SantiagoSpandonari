@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PublicacionesController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\UsuariosController;
 use App\Models\users;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,8 @@ Route::get('/Login', function () {
 Route::get('/Registro', function () {
     return view('AltaUsuario');
 });
+
+Route::post("/Registro",[UsuariosController::class, "store"]);
 
 Route::get('/Publicar', function () {
     return view('AltaPublicaciones');

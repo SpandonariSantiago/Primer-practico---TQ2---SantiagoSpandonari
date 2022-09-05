@@ -35,7 +35,11 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $u = new Usuarios();
+        $u -> NombreUsuario = $request -> input("NombreUsuario");
+        $u -> NombreCompleto = $request -> input("NombreCompleto");
+        $u -> Password = $request -> input("Password");
+        $u -> save();
     }
 
     /**
