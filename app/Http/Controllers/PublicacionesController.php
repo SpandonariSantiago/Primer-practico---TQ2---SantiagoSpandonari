@@ -35,7 +35,10 @@ class PublicacionesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $p = new Publicaciones();
+        $p -> Autor = $request -> input("Autor");
+        $p -> Cuerpo = $request -> input("Cuerpo");
+        $p -> save();
     }
 
     /**
@@ -46,7 +49,8 @@ class PublicacionesController extends Controller
      */
     public function show(Publicaciones $publicaciones)
     {
-        //
+        $Publicaciones = Publicaciones::all();
+        return view('Inicio',["Publicaciones" => $Publicaciones]);
     }
 
     /**

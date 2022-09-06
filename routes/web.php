@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Inicio');
-});
+Route::get("/",[PublicacionesController::class, "show"]);
 
 Route::get('/Login', function () {
     return view('Login');
@@ -30,6 +28,7 @@ Route::get('/Registro', function () {
 });
 
 Route::post("/Registro",[UsuariosController::class, "store"]);
+
 
 Route::get('/Publicar', function () {
     return view('AltaPublicaciones');

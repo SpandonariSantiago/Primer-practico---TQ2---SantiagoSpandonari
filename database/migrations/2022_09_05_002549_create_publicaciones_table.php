@@ -16,13 +16,14 @@ class CreatePublicacionesTable extends Migration
     {
         Schema::create('publicaciones', function (Blueprint $table) {
             $table->id();
-            $table->String("Autor")->unique();
+            $table->String("Autor");
             $table->String("Cuerpo");
             $table->timestamps();
             $table->softDeletes();
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

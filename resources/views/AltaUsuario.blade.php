@@ -28,5 +28,14 @@
     <br /><hr>
     
     <a href='/'>Volver</a><br />
+    
+    @isset({{ $error }}) && {{ $error }} === False)){
+        <br /><hr>
+        <div style="color: red;">Error al crear el usuario</div>
+    @}else{
+        <br /><hr>
+        <div style="color: green;">Usuario creado correctamente</div>
+    @}endif
+
 </body>
 </html>

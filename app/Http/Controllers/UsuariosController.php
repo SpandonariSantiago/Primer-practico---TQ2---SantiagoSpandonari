@@ -39,7 +39,11 @@ class UsuariosController extends Controller
         $u -> NombreUsuario = $request -> input("NombreUsuario");
         $u -> NombreCompleto = $request -> input("NombreCompleto");
         $u -> Password = $request -> input("Password");
-        $u -> save();
+        if ($u -> save()){
+            return view("AltaUsuario",["error" => False ]);    
+        }else{
+            return view("AltaUsuario",["error" => True ]); 
+        };
     }
 
     /**
