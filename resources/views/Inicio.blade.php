@@ -10,8 +10,17 @@
     <h1>BLOG</h1><hr>
     <h2>Bienvenido a nuestro blog, donde podra publicar lo que usted quiera ☺</h2>
 
-    <hr><h3>Si desea iniciar sesion presione aqui:</h3><a href='/Login'>Iniciar sesion</a><hr>
-    <h3>Si desea Registrarse presione aqui:</h3><a href='/Registro'>Registrarse</a><hr>
+    @auth
+    
+        <hr><h3>Si desea cerrar sesion presione aqui:</h3><a href= "{{url()->route('Login')}}" >Cerrar sesion</a><hr>
+        
+    @endauth
+    @guest
+    
+        <hr><h3>Si desea iniciar sesion presione aqui:</h3><a href='/Login'>Iniciar sesion</a><hr>
+        <h3>Si desea Registrarse presione aqui:</h3><a href='/Registro'>Registrarse</a><hr>
+
+    @endguest
 
     <h3>Publicaciones</h3><hr>
 
@@ -22,5 +31,6 @@
             <b>&nbsp;&nbsp;Publicacin: </b> {{ $Publicacion -> Cuerpo }}<hr>
     
     @endforeach
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PublicacionesController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UsuariosController;
 use App\Models\users;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/",[PublicacionesController::class, "show"]);
 
+Route::post("/Login",[UserController::class, "IniciarSesion"]);
+
 Route::get('/Login', function () {
     return view('Login');
 });
@@ -27,7 +30,7 @@ Route::get('/Registro', function () {
     return view('AltaUsuario');
 });
 
-Route::post("/Registro",[UsuariosController::class, "store"]);
+Route::post("/Registro",[UserController::class, "store"]);
 
 
 Route::get('/Publicar', function () {
