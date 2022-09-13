@@ -27,7 +27,7 @@
     </form>
     <br /><hr>
     
-    <a href='/'>Volver</a>
+    <a href='/'><input type="button" value="Volver"></a>
     
     @isset($error)
         @if($error)

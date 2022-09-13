@@ -22,11 +22,18 @@
     </form>
     <br /><hr>
 
-    <a href="/Registro">Crear Usuario</a>
+    <a href="/Registro"><input type="button" value="Crear usuario"></a>
 
     <br /><hr>
     
-    <a href='/'>Volver</a>
+    <a href='/'><input type="button" value="Volver"></a>
+
+    @isset($error)
+        @if($error)
+            <br /><hr>
+            <div style="color: red;">Error al iniciar sesion</div>
+        @endif
+    @endif
     
 </body>
 </html>

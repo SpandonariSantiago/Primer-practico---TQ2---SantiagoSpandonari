@@ -16,17 +16,24 @@
     <form action="/Publicar" method="post">@csrf
 
         <label for="Autor">Autor:</label><br />
-        <input type="text" name="Autor" id="Autor"><br /><br />
+        <input type="text" name="Autor" id="Autor" value="{{ session('Autor') }}" readonly><br /><br />
 
         <label for="Cuerpo">Aqui escriba lo que quiera publicar: </label><br />
-        <textarea name="Cuerpo" id="Cuerpo" placeholder="Escribe en tu post"></textarea><br /><br />
+        <textarea name="Cuerpo" id="Cuerpo" maxlength="255" rows="5" cols="100" placeholder="Escribe en tu post"></textarea><br /><br />
 
         <input type="submit" value="Publicar">
         <input type="reset" value="Vaciar">
     </form>
     <hr>
     
-    <br /><a href='/'>Volver</a><br />
+    <br /><a href='/'><input type="button" value="Volver"></a><br />
+
+    @isset($error)
+        @if($error)
+            <br /><hr>
+            <div style="color: red;">Error al crear la publicacion</div>
+        @endif
+    @endif
 
 </body>
 </html>

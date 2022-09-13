@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/",[PublicacionesController::class, "show"]);
 
-Route::post("/Login",[UserController::class, "IniciarSesion"]);
+Route::post("/",[UserController::class, "Sesion"]);
+
+Route::post("/Login",[UserController::class, "Sesion"]);
 
 Route::get('/Login', function () {
     return view('Login');
