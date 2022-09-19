@@ -4,40 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="{{ asset('../css/Registro.css') }}">
     <title>Registro</title>
 </head>
 <body>
-    <h1>REGISTRO DE USUARIO</h1> 
-    <hr><h2>Ingrese los datos del usuario</h2><hr>
-    
-    <br /> 
+
+    <div id="CirculoTopFuera"></div>
+
+    <div id="Barra"></div>
+
+    <a href='/' id="BotonInicio" type="button">B</a>
+
     <form action="/Registro" method="post">@csrf
-        <label for="NombreUsuario">Nombre de Usuario: </label>
-        <input type="text" name="NombreUsuario" id="NombreUsuario"> 
-        <label>(Tenga en cuenta que con este nombre lo veran los demas usuarios)</label><br /><br /> 
 
-        <label for="NombreCompleto">Nombre completo: </label>
-        <input type="text" name="NombreCompleto" id="NombreCompleto"><br /><br />
+        <div id="contenedor">
 
-        <label for="Password">Contraseña: </label>
-        <input type="Password" name="Password" id="Password"><br /><br />
+            <div id="Titulo">Registro de usuario</div>
 
-        <input type="submit" value="Crear Usuario">
-        <input type="reset" value="Vaciar">
+            <input type="text" class="IngresoDato" name="NombreUsuario" id="NombreUsuario" placeholder="Ingrese su nombre de usuario..." maxlength="20"> 
+        
+            <input type="text" class="IngresoDato" name="NombreCompleto" id="NombreCompleto" placeholder="Ingrese su nombre completo...">
+
+        
+            <input type="Password" class="IngresoDato" name="Password" id="Password" placeholder="Ingrese su contraseña...">
+
+            <div id="BarraSeparadora"></div>
+        
+            <input type="submit" id="BotonRegistro" value="Registrarse">
+
+            @isset($error)
+                @if($error)
+                    <div class="Error">
+                        <i class="fa fa-warning"></i>
+                        <p id="Cuerpo">Error al crear el usuario</p>
+                    </div>
+                @endif
+            @endif
+
+        </div>
+
     </form>
-    <br /><hr>
-    
-    <a href='/'><input type="button" value="Volver"></a>
-    
-    @isset($error)
-        @if($error)
-            <br /><hr>
-            <div style="color: red;">Error al crear el usuario</div>
-        @else
-            <br /><hr>
-            <div style="color: green;">Usuario creado correctamente</div>
-        @endif
-    @endif
 
 </body>
 </html>

@@ -1,0 +1,210 @@
+* {
+    font: oblique bold 100% cursive;
+    background-image: url("../Imagenes/FondoFinal.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+#TituloP{
+    font: oblique bold 300% cursive;
+    color: darkorange;
+    text-shadow: rgba(0, 0, 0, 0.719) 4px 3px 3px;
+    background: none;
+    text-align: center;
+    margin-top: -5px;
+    margin-left: 350px;
+    width: 575px;
+    height: 75px;
+}
+
+#Subtitulo{
+    font: oblique bold 125% cursive;
+    background: none;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.719) 1px 1px 1px;
+    margin-left: 15px;
+    width: 1250px;
+    height: 125px;
+    text-align: center;
+}
+
+#CirculoTopFuera {
+    box-shadow: 0 0 2px 2px white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 250px;
+    left: 600px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+}
+
+#BotonInicio {
+    position: absolute;
+    top: 260px;
+    left: 610px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: inset 0 0 10px 3px rgb(16, 86, 156);
+    font: oblique bold 325% cursive;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.322) 3px 2px 2px;
+    border: 0;
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: dodgerblue;
+    transition: .4s;
+}
+
+#BotonInicio:hover{
+    text-shadow: inset -5px -5px 1px 10px black;
+    color: rgba(255, 255, 255, 0.733);
+    background: darkorange;
+    box-shadow: inset 0 0 20px 10px rgb(112, 65, 8);
+}
+
+#Barra{
+    position: absolute;
+    border-radius: 50px;
+    top: 290px;
+    left: 50px; 
+    width: 1200px;
+    height: 20px;
+    box-shadow: 0 0 2px 2px white;
+    background: white;
+}
+
+.Titulos{
+    position: absolute;
+    text-align: center;
+    font: oblique bold 200% cursive;
+    color: darkorange;
+    text-shadow: rgba(0, 0, 0, 0.719) 4px 3px 3px;
+    background: none;
+    top: 375px;
+}
+
+#TAutor{
+    left: 175px;
+    width: 125px;
+    height: 50px;
+}
+
+#TCuerpo{
+    right: 180px; 
+    width: 600px;
+    height: 50px;
+}
+
+#Autor{
+    padding-left: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px 3px rgb(136, 77, 6);
+    text-shadow: rgba(0, 0, 0, 0.719) 3px 2px 2px;
+    border: 5px solid darkorange;
+    background: rgb(226, 150, 57);
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 475px;
+    left: 100px;
+    width: 250px;
+    height: 50px;
+}
+
+#Autor:focus{
+    outline: none;
+}
+
+#Cuerpo{
+    font: oblique bold 150% cursive;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px 2px rgb(7, 83, 158);
+    border: 5px solid dodgerblue;
+    position: absolute; 
+    background: white;
+    top: 450px;
+    right: 100px;
+    width: 750px;
+    height: 100px;
+    resize: none;
+    transition: .4s;
+}
+
+#Cuerpo:focus{
+    outline: none;
+    box-shadow: inset 0 0 4px 3px rgb(136, 77, 6);
+    border: 5px solid darkorange;
+}
+
+.Botones{
+    position: absolute;
+    font: oblique bold 150% cursive;
+    color: white;
+    bottom: 30px;
+    width: 300px; 
+    height: 50px; 
+    box-shadow: inset 0 0 10px 3px rgb(16, 86, 156);
+    outline: 2px solid dodgerblue;
+    outline-offset: 3px;
+    border-radius: 25px;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    background: dodgerblue;
+    transition: .4s;
+}
+
+.Botones:hover{
+    text-shadow: inset -5px -5px 1px 10px black;
+    color: rgba(255, 255, 255, 0.733);
+    background: darkorange;
+    box-shadow: inset 0 0 20px 10px rgb(112, 65, 8);
+    outline: 2px solid rgb(112, 65, 8);
+}
+
+#BotonPublicar{
+    left: 75px;
+}
+
+#BotonVaciar{
+    right: 75px;
+}
+
+.Error{
+    font: oblique bold 100% cursive;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   width: 300px; 
+    height: 50px; 
+    bottom: 27px;
+   right: 500px;
+   border-radius: 25px;
+   text-align: left;
+   box-shadow: inset 0 0 5px 2px rgb(97, 2, 2);
+   background: rgba(255, 0, 0, 0.473);
+   border: solid 3px rgb(194, 8, 8);
+   color: rgb(194, 8, 8);
+}
+
+#CuerpoE{
+    margin-top: -28px;
+    margin-left: 50px;
+    background: none;
+}
+
+.Error i{
+    margin-left: 15px;
+    padding-top: 15px;
+    background: none;
+    font-size: 25px;
+}

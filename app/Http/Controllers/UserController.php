@@ -37,9 +37,11 @@ class UserController extends Controller
                             session(['Login' => TRUE]);
                             return redirect ("/");
                     }
-                }        
+                    return view("Login", ["error" => True]);
+                }     
+                return view("Login", ["error" => True]);   
         } catch (\Throwable $th) {
-            return view("Inicio", ["error" => True]);
+            return view("Login", ["error" => True]);
         }
         
     }

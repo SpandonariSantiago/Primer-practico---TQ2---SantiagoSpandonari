@@ -4,44 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="{{ asset('../css/Inicio.css') }}">
     <title>Blog</title>
 </head>
+
 <body>
-    <h1>BLOG</h1><hr>
-    <h2>Bienvenido a nuestro blog, donde podra publicar lo que usted quiera ☺</h2>
 
     @if(session('Login'))
 
-    <hr>
         <form action="/" method="post">@csrf
         
-            <label for="NombreUsuario">Bienvenido: </label>
-            <input type="text" name="NombreUsuario" id="NombreUsuario" value="{{ session('Autor') }}" readonly><br /><br />
+            <div id="SesionAutor">¡Bienvenido {{ session('Autor') }}!</div>
 
-            <label>Si desea cerrar sesion presione aqui: </label>
-            <input type="submit" value="Cerrar Sesión">
+            <input type="submit" id="BotonCerrarSesion" class="BotonesBarra" value="Cerrar Sesión">
         </form>
 
-    <hr><h3>Si desea hacer una publicacion presione aqui:</h3><a href='/Publicar'><input type="button" value="Publicar"></a><hr>
-        
+        <a href='/Publicar' id="BotonPublicar" class="BotonesBarra">Publicar</a>
+
     @else    
 
-        <hr><h3>Si desea iniciar sesion presione aqui:</h3><a href='/Login'><input type="button" value="Iniciar sesion"></a><hr>
-        <h3>Si desea Registrarse presione aqui:</h3><a href='/Registro'><input type="button" value="Registrarse"></a><hr>
+        <div id="CirculoTopFuera"></div>
+        <a href='/' id="BotonInicio" type="button">B</a>
 
-    @endif
+        <a href='/Login' id="BotonInicioSesion" class="BotonesBarra">Iniciar Sesion</a>
+        <a href='/Registro' id="BotonRegistro" class="BotonesBarra">Registrarse</a>
 
-    <h3>Publicaciones</h3><hr>
-
-    @isset($Publicaciones)
-        @foreach($Publicaciones as $Publicacion)
-                
-                <b>Autor:</b> {{ $Publicacion -> Autor }} 
-                <b>&nbsp;&nbsp;Fecha de publicacion:</b>{{ $Publicacion -> updated_at }}<br />
-                <b>&nbsp;&nbsp;Publicacin: </b> {{ $Publicacion -> Cuerpo }}<hr>
         
-        @endforeach
+        <div class="Aviso">
+            <i class="fa fa-warning"></i>
+            <p id="CuerpoA">Para crear una pubicacion inicia sesion</p>
+        </div>
+        
     @endif
+
+    <div id="CirculoGrande">
+        <div id="CirculoChico">
+           
+            <div id="Titulo">Bienvenidos a BLOG MARK 2</div>
+
+            <p id="Cuerpo" >Creado por Santiago Spandonari en 2022, 
+                este blog está orientado a aquellas personas 
+                que necesiten de un espacio para poder expresarse sin prejuicios.<br>
+                
+                <br>Aqui podras publicar cuanto quieras de manera anonima. 
+                Comienza cuando quieras! Inicia sesion para publicar algo 
+                o solo echa un vistazo de lo que los otros usuarios tienen 
+                para decir.</p>
+
+            <div id="TituloP">Publicaciones</div>
+
+            @isset($Publicaciones)
+                <textarea id="Comentarios" readonly>
+                    @foreach($Publicaciones as $Publicacion)
+--| {{ $Publicacion -> updated_at }} |--
+
+&nbsp;| Autor | -> {{ $Publicacion -> Autor }}
+&nbsp;| Cuerpo| -> {{ $Publicacion -> Cuerpo }}         
+
+                    @endforeach
+                </textarea>
+            @endif
+        </div>
+    </div>
+
+    <div id="CirculoTopFuera"></div>
+    <a href='/' id="BotonInicio" type="button">B</a>
 
 </body>
 </html>

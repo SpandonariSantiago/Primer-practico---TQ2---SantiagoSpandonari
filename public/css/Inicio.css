@@ -1,0 +1,237 @@
+* {
+    font: oblique bold 100% cursive;
+    background: white;
+}
+
+#CirculoTopFuera {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 15px;
+    left: 590px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: darkorange;
+}
+
+#BotonInicio {
+    position: absolute;
+    top: 30px;
+    left: 605px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: inset 0 0 10px 3px rgb(16, 86, 156);
+    font: oblique bold 325% cursive;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.322) 3px 2px 2px;
+    border: 0;
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: dodgerblue;
+    transition: .4s;
+}
+
+#BotonInicio:hover{
+    text-shadow: inset -5px -5px 1px 10px black;
+    color: rgba(255, 255, 255, 0.733);
+    background: darkorange;
+    box-shadow: inset 0 0 20px 10px rgb(112, 65, 8);
+}
+
+#CirculoGrande {
+    width: 100%; 
+    height: 625px; 
+    -moz-border-radius: 100px 100px 0 0;
+    -webkit-border-radius: 100px 100px 0 0;
+    border-radius: 100px 100px 0 0;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    background: darkorange;
+}
+
+#CirculoChico{
+    width: 1250px; 
+    height: 600px; 
+    -moz-border-radius: 100px 100px 0 0;
+    -webkit-border-radius: 100px 100px 0 0;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    background-image: url("../Imagenes/FondoFinal.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.BotonesBarra{
+    position: absolute;
+    font: oblique bold 150% cursive;
+    color: white;
+    top: 15px;
+    width: 400px; 
+    height: 40px; 
+    box-shadow: inset 0 0 10px 3px rgb(16, 86, 156);
+    outline: 2px solid dodgerblue;
+    outline-offset: 3px;
+    border-radius: 25px;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    background: dodgerblue;
+    transition: .4s;
+}
+
+.BotonesBarra:hover{
+    text-shadow: inset -5px -5px 1px 10px black;
+    color: rgba(255, 255, 255, 0.733);
+    background: darkorange;
+    box-shadow: inset 0 0 20px 10px rgb(112, 65, 8);
+    outline: 2px solid rgb(112, 65, 8);
+}
+
+#BotonInicioSesion{
+    left: 125px;
+}
+
+#BotonRegistro{
+    right: 125px;
+}
+
+#BotonCerrarSesion{
+    right: 125px;
+}
+
+#BotonPublicar{
+    z-index: 1;
+    position:absolute;
+    right: 125px;
+    top: 595px;
+}
+
+#SesionAutor{
+    position: absolute;
+    text-align: center;
+    left: 75px;
+    font: oblique bold 200% cursive;
+    color: darkorange;
+    text-shadow: rgba(0, 0, 0, 0.719) 2px 1px 1px;
+    background: none;
+}
+
+#Titulo{
+    position: absolute;
+    text-align: center;
+    font: oblique bold 200% cursive;
+    color: darkorange;
+    text-shadow: rgba(0, 0, 0, 0.719) 4px 3px 3px;
+    background: none;
+    top: 50px;
+    left: 75px;
+}
+
+#Cuerpo{
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.507) 2px 1px 1px;
+    font: oblique bold 150% cursive;
+    background: none;
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 400px;
+    height: 400px;
+    text-align: justify;
+}
+
+#TituloP{
+    position: absolute;
+    text-align: center;
+    font: oblique bold 200% cursive;
+    color: darkorange;
+    text-shadow: rgba(0, 0, 0, 0.719) 4px 3px 3px;
+    background: none;
+    top: 50px;
+    right: 215px;
+}
+
+.Aviso{
+    z-index: 1;
+    font: oblique bold 100% cursive;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   width: 405px; 
+    height: 45px;  
+    right: 125px;
+    bottom: 60px;
+   border-radius: 25px;
+   text-align: left;
+   box-shadow: inset 0 0 5px 2px rgb(131, 131, 21);
+   background: rgb(201, 201, 73);
+   border: solid 3px yellow;
+   color: rgb(109, 109, 19);
+}
+
+#CuerpoA{
+    margin-top: -25px;
+    margin-left: 60px;
+    background: none;
+}
+
+.Aviso i{
+    margin-left: 15px;
+    padding-top: 10px;
+    background: none;
+    font-size: 25px;
+}
+
+#Contenedor{
+    box-shadow: 7px 13px 37px black;
+    border: 10px solid darkorange;
+    position: absolute;
+    border-radius: 15px;
+    top: 150px;
+    right: 50px;
+    width: 500px;
+    height: 300px;
+    background: white;
+}
+
+#Comentarios{
+    outline: none;
+    font: oblique bold 125% cursive;
+    text-shadow: rgba(0, 0, 0, 0.507) 3px 2px 2px;
+    color: white;
+    box-shadow: 7px 13px 37px black;
+    border: 10px solid darkorange;
+    position: absolute;
+    border-radius: 15px;
+    top: 150px;
+    right: 50px;
+    width: 500px;
+    height: 300px;
+    background: rgb(241, 169, 81);
+    resize: none;
+}
+
+#Comentarios::-webkit-scrollbar{
+    background: rgb(146, 82, 4);
+    width: 13px;
+ }
+ #Comentarios::-webkit-scrollbar-thumb{
+     background: rgb(248, 141, 9);
+     width: 15px;
+ }
+ #Comentarios::-webkit-scrollbar-thumb:hover{
+     background-color: rgb(238, 149, 41);
+ }
+ 
+ #Comentarios::-webkit-scrollbar-thumb:active{
+     background-color: rgb(236, 174, 97);
+ }
